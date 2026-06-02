@@ -29,7 +29,7 @@ import { invoiceBalance, invoicePaidAmount } from '../utils/payments';
 function shell(profile: BusinessProfile, body: string, title = 'BizKit Document'): string {
   return `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=595" />
 <title>${escapeHtml(title)}</title>
 <style>${documentStyles(profile)}</style>
 </head><body><main class="document-shell">${body}${footerBlock(profile)}</main></body></html>`;

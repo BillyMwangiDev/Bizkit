@@ -84,10 +84,10 @@ export function documentStyles(profile: BusinessProfile): string {
       font-family: ${theme.headingFont}; font-weight: 700; font-size: 24px;
     }
 
-    .biz-name { font-size: 22px; font-weight: 700; margin-top: 10px; }
-    .biz-meta { font-size: 11px; line-height: 1.6; margin-top: 6px; }
-    .header-left { max-width: 62%; }
-    .header-right { text-align: right; min-width: 190px; }
+    .biz-name { font-size: 22px; font-weight: 700; margin-top: 10px; overflow-wrap: anywhere; }
+    .biz-meta { font-size: 11px; line-height: 1.6; margin-top: 6px; overflow-wrap: anywhere; }
+    .header-left { max-width: 62%; min-width: 0; }
+    .header-right { text-align: right; min-width: 190px; overflow-wrap: anywhere; }
     .doc-title-tag {
       display: inline-block; padding: 6px 14px; border-radius: 999px;
       font-size: 11px; font-weight: 700; text-transform: uppercase;
@@ -160,8 +160,8 @@ export function documentStyles(profile: BusinessProfile): string {
       font-size: 10px; font-weight: 700; text-transform: uppercase;
       letter-spacing: 0.6px; color: ${brand}; margin-bottom: 6px;
     }
-    .party-card .name { font-size: 15px; font-weight: 700; color: #0F172A; }
-    .party-card .line { font-size: 11px; color: #475569; margin-top: 2px; }
+    .party-card .name { font-size: 15px; font-weight: 700; color: #0F172A; overflow-wrap: anywhere; }
+    .party-card .line { font-size: 11px; color: #475569; margin-top: 2px; overflow-wrap: anywhere; }
 
     table.items {
       width: 100%;
@@ -188,7 +188,7 @@ export function documentStyles(profile: BusinessProfile): string {
     table.items tbody tr:nth-child(even) td { background: #FAFBFC; }
     .num { text-align: right; white-space: nowrap; }
     .item-index { width: 34px; text-align: center; color: #64748B; }
-    .item-name { font-weight: 600; color: #0F172A; }
+    .item-name { font-weight: 600; color: #0F172A; overflow-wrap: anywhere; }
     .amount-cell { font-weight: 700; color: #0F172A; }
     .empty-row { padding: 18px 12px; text-align: center; color: #94A3B8; }
 
@@ -233,7 +233,7 @@ export function documentStyles(profile: BusinessProfile): string {
       border-radius: ${radius}px; padding: 48px 36px; margin-bottom: 28px;
       page-break-inside: avoid; break-inside: avoid;
     }
-    .cover h1 { color: ${onBrand}; font-size: 30px; letter-spacing: -0.5px; }
+    .cover h1 { color: ${onBrand}; font-size: 30px; letter-spacing: -0.5px; overflow-wrap: anywhere; }
     .cover .tagline { color: ${onBrand}; opacity: 0.9; margin-top: 8px; font-size: 13px; }
 
     .service-list { list-style: none; columns: 2; column-gap: 24px; }
