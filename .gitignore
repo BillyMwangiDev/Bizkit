@@ -39,3 +39,7 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# local tooling state
+.omc/
+.claude/scheduled_tasks.lock

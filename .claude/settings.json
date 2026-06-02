@@ -1,5 +1,19 @@
 {
   "enabledPlugins": {
     "expo@claude-plugins-official": true
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "input=$(cat); echo \"$input\" | jq -e \".stop_hook_active == true\" >/dev/null 2>&1 && exit 0; out=$(npm --prefix /Users/billy/WORK/Bizkit run typecheck 2>&1); test $? -eq 0 && exit 0; printf \"%s\" \"$out\" | jq -Rs \"{decision:\\\"block\\\",reason:(\\\"Typecheck failed before finishing the turn. Fix these — do not claim success:\\n\\\"+.)}\"",
+            "statusMessage": "Typechecking…",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
   }
 }
